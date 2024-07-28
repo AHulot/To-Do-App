@@ -38,7 +38,12 @@ function loadList() {
     {
       "text": "Tasks can be marked as complete or incomplete by clicking on them! ✅❌",
       "checked": true
-    }];
+    },
+    {
+      "text": "Delete the task by pressing the ❌ button to the right! 👉",
+      "checked": false
+    }
+  ];
 
     localStorage.setItem('todoList', JSON.stringify(items));
     
