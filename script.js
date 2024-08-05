@@ -78,7 +78,6 @@ function(ev) {
   if (ev.target.tagName === 'LI') {
     var sfx = document.getElementById("AudioFiles Complete");
     sfx.play();
-    
     ev.target.classList.toggle('checked');
     saveList(); // Save the updated list
   }

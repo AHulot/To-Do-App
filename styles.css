@@ -51,6 +51,8 @@ ul li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
 }
 
 /* Increase opacity on hover */
