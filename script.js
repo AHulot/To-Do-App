@@ -105,6 +105,8 @@ function newElement() {
 
     addCloseButton(li);
     saveList(); // Save the updated list
+
+    li.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 }
 
