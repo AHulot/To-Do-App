@@ -9,6 +9,9 @@ function addCloseButton(li) {
   // Add click event listener to the close button
   span.addEventListener('click',
   function() {
+    var sfx = document.getElementById("AudioFiles Cancel");
+    sfx.play();
+
     li.remove();
     saveList(); // Save the updated list
   });
@@ -73,6 +76,9 @@ function saveList() {
 document.getElementById('myUL').addEventListener('click',
 function(ev) {
   if (ev.target.tagName === 'LI') {
+    var sfx = document.getElementById("AudioFiles Confirm");
+    sfx.play();
+    
     ev.target.classList.toggle('checked');
     saveList(); // Save the updated list
   }
