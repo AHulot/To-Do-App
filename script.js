@@ -9,7 +9,7 @@ function addCloseButton(li) {
   // Add click event listener to the close button
   span.addEventListener('click',
   function() {
-    var sfx = document.getElementById("AudioFiles Cancel");
+    var sfx = document.getElementById("AudioFiles Delete");
     sfx.play();
 
     li.remove();
@@ -76,7 +76,7 @@ function saveList() {
 document.getElementById('myUL').addEventListener('click',
 function(ev) {
   if (ev.target.tagName === 'LI') {
-    var sfx = document.getElementById("AudioFiles Confirm");
+    var sfx = document.getElementById("AudioFiles Complete");
     sfx.play();
     
     ev.target.classList.toggle('checked');
@@ -85,7 +85,7 @@ function(ev) {
 },
 false);
 
-// Create a new list item when clicking on the "Add" button
+// Create a new list item when pressing 'Enter'
 function newElement() {
   const inputValue = document.getElementById("myInput").value.trim();
 
@@ -94,6 +94,9 @@ function newElement() {
       alert("You must write something!");
       return;
     }
+
+    var sfx = document.getElementById("AudioFiles New");
+    sfx.play();
 
     const li = document.createElement("li");
     li.textContent = inputValue;
